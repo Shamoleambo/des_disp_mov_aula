@@ -14,5 +14,8 @@ class TodoNote() {
         this.date = LocalDateTime.now();
     }
 
-    
+    override fun toString(): String {
+        return "TodoNote:\n\tNote Text: $noteText\n\tStatus: $status\n\tDate: $date"
+    }
+
 }
