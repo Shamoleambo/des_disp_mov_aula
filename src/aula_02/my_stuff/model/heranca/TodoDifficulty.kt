@@ -1,8 +1,12 @@
 package aula_02.my_stuff.model.heranca
 
-class TodoDifficulty : Todo() {
+import java.time.LocalDateTime
 
-    val isTaskHard: Boolean = false
+class TodoDifficulty(noteText: String, status: Boolean, date: LocalDateTime, val isTaskHard: Boolean) :
+    Todo(noteText, status, date) {
 
-    
+    override fun toString(): String {
+        return "Note:\n\t$noteText\n\t$status\n\t$date\n\t$isTaskHard"
+    }
+
 }
